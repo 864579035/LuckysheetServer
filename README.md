@@ -3,7 +3,7 @@
 English| [简体中文](./README-zh.md)
 
 ## Introduction
-💻[Luckysheet](https://github.com/mengshukeji/Luckysheet/) official Java version backend, using OT algorithm.
+💻[Luckysheet](https://github.com/mengshukeji/Luckysheet/) official Java version backend.
 
 ## Demo
 - [Cooperative editing demo](http://luckysheet.lashuju.com/demo/)(Note: Please do not operate frequently to prevent the server from crashing)
