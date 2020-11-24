@@ -3,7 +3,7 @@
 简体中文 | [English](./README.md)
 
 ## 介绍
-💻[Luckysheet](https://github.com/mengshukeji/Luckysheet/) 官方Java版本后台。
+💻[Luckysheet](https://gitee.com/mengshukeji/Luckysheet/) 官方Java版本后台。
 
 ## 演示
 - [协同编辑Demo](http://luckysheet.lashuju.com/demo/)（注意：请大家别操作频繁，防止搞崩服务器）
@@ -17,8 +17,8 @@ postgre >= 10 (支持jsonb的版本)
 - [postgre中jsonb字段处理](https://www.cnblogs.com/xuchen0117/p/13890710.html)
 
 redis >= 3
-- [Docker部署Reids](https://www.cnblogs.com/xuchen0117/p/12183399.html)
-- [Docker部署Reids集群](https://www.cnblogs.com/xuchen0117/p/11678931.html)
+- [Docker部署Redis](https://www.cnblogs.com/xuchen0117/p/12183399.html)
+- [Docker部署Redis集群](https://www.cnblogs.com/xuchen0117/p/11678931.html)
 
 
 nginx >= 1.12
@@ -164,7 +164,7 @@ logback-spring.xml 日志配置
 ```
 ## 项目说明
 
-### luckysheet模块主要类说明
+### Luckysheet模块主要类说明
 com.xc.luckysheet.WebApplication 项目启动类
 
 com.xc.luckysheet.controller
@@ -199,15 +199,15 @@ ScheduleService 对定时数据库初始化
 com.xc.luckysheet.utils
 ```
 GzipHandle 信息压缩
-Pako_GzipUtils webdocket信息压缩
+Pako_GzipUtils WebSocket信息压缩
 ```
 com.xc.luckysheet.websocket
 ```
 IpAndPortUtil 获取当前服务的ip与端口
 MyWebSocketHandler Socket处理器(包括发送信息，接收信息，信息错误等方法。)
 MyWebSocketInterceptor Socket建立连接（握手）和断开
-WebSocketConfig 注册WebSocket 设置websocket的地址
-WSUserModel websocket对象
+WebSocketConfig 注册WebSocket，设置WebSocket的地址
+WSUserModel WebSocket对象
 ```
 
 ### common模块主要类说明
@@ -217,7 +217,7 @@ com.xc.common.config.redis.RedisConfig redis配置类
 ```
 
 ## 相关链接
-- [Luckysheet官方文档](https://mengshukeji.github.io/LuckysheetDocs/)
+- [Luckysheet官方文档](https://mengshukeji.gitee.io/LuckysheetDocs/)
 - [Luckysheet如何把表格里的数据保存到数据库](https://www.cnblogs.com/DuShuSir/p/13857874.html)
 
 ## 贡献者和感谢
