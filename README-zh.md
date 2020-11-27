@@ -129,6 +129,7 @@ location / {
     index  index.html index.htm luckysheet_demo;
 }
 ```
+启动nginx示例
 ```
 #运行nginx
 
@@ -148,9 +149,27 @@ docker run --name master_nginx \
 -p 80:80 -p 443:443 \
 -d firesh/nginx-lua
 ```
-yml文件中新增一条shell命令，将`https://github.com/mengshukeji/LuckyResources/blob/master/demo/luckysheet_demo.html`下载下来放入主机`/software/nginx/html/luckysheet`目录下，即可
+yml文件中新增一条shell命令，将`wget -P /software/back https://raw.githubusercontent.com/mengshukeji/LuckyResources/master/demo/luckysheet_demo.html`下载下来放入主机`/software/nginx/html/luckysheet`目录下，即可
 - 通过`项目的ip:端口`访问静态主页
 - 通过`项目的ip:端口?share`访问协同编辑主页
+
+下载命令
+```shell
+wget -P /software/nginx/html/luckysheet https://raw.githubusercontent.com/mengshukeji/LuckyResources/master/demo/luckysheet_demo.html
+```
+
+添加到docker-compose yml配置文件里，示例：
+```
+  build: .
+  command: bash -c "
+    wget -P /software/nginx/html/luckysheet https://raw.githubusercontent.com/mengshukeji/LuckyResources/master/demo/luckysheet_demo.html
+  "
+  volumes:
+    - .:/code
+  ports:
+    - "8000:8000"
+
+```
 
 ## 项目用法 
 application.yml 项目配置
