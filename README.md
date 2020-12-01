@@ -8,6 +8,9 @@ English| [简体中文](./README-zh.md)
 ## Demo
 - [Cooperative editing demo](http://luckysheet.lashuju.com/demo/)(Note: Please do not operate frequently to prevent the server from crashing)
 
+## Deploy
+- [LuckysheetServer Starter](https://github.com/mengshukeji/LuckysheetServerStarter)
+
 ## Requirements
 
 jdk >= 1.8
