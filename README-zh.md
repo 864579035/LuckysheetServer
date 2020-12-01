@@ -8,6 +8,9 @@
 ## 演示
 - [协同编辑Demo](http://luckysheet.lashuju.com/demo/)（注意：请大家别操作频繁，防止搞崩服务器）
 
+## 部署
+- [LuckysheetServer Starter](https://github.com/mengshukeji/LuckysheetServerStarter)
+
 ## 环境
 
 jdk >= 1.8
