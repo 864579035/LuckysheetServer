@@ -128,10 +128,15 @@ location /luckysheet/ {
 
 #Static resource configuration
 location /luckysheet/demo/ {
-    root /[Resource path]/;
+    root /usr/share/nginx/html;
     index  index.html index.htm;
 }
 ```
+
+### Access test
+
+- Access the static homepage through `[project ip]:[port]`
+- Access the collaborative editing homepage through `[project ip]:[port]?share`
 
 ## Project usage 
 application.yml Project configuration
