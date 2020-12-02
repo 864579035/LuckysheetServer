@@ -128,51 +128,15 @@ location /luckysheet/ {
 
 #静态资源配置，Luckysheet前端代码目录
 location / {
-    root   /usr/share/nginx/html/luckysheet; # 可修改为自己的资源路径
-    index  index.html index.htm luckysheet_demo;
+    root   /usr/share/nginx/html; # 可修改为自己的资源路径
+    index  index.html index.htm;
 }
 ```
-启动nginx示例
-```
-#运行nginx
 
-docker pull firesh/nginx-lua #下载nginx镜像
+### 访问测试
 
-# 启动nginx服务,配置文件目录挂载本地
-# 时区要提前挂载,否则日志的时区对应不上
-
-docker run --name master_nginx \
--v /etc/localtime:/etc/localtime \
--v /software/nginx/cert:/etc/nginx/cert \
--v /software/nginx/nginx.conf:/etc/nginx/nginx.conf \
--v /software/nginx/conf.d:/etc/nginx/conf.d \
--v /software/nginx/html:/usr/share/nginx/html \
--v /software/nginx/logs:/var/log/nginx \
---restart=always \
--p 80:80 -p 443:443 \
--d firesh/nginx-lua
-```
-yml文件中新增一条shell命令，将`wget -P /software/back https://raw.githubusercontent.com/mengshukeji/LuckyResources/master/demo/luckysheet_demo.html`下载下来放入主机`/software/nginx/html/luckysheet`目录下，即可
 - 通过`项目的ip:端口`访问静态主页
 - 通过`项目的ip:端口?share`访问协同编辑主页
-
-下载命令
-```shell
-wget -P /software/nginx/html/luckysheet https://raw.githubusercontent.com/mengshukeji/LuckyResources/master/demo/luckysheet_demo.html
-```
-
-添加到docker-compose yml配置文件里，示例：
-```
-  build: .
-  command: bash -c "
-    wget -P /software/nginx/html/luckysheet https://raw.githubusercontent.com/mengshukeji/LuckyResources/master/demo/luckysheet_demo.html
-  "
-  volumes:
-    - .:/code
-  ports:
-    - "8000:8000"
-
-```
 
 ## 项目用法 
 application.yml 项目配置
